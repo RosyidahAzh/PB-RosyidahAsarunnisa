@@ -1,7 +1,6 @@
 package com.example.helloworld;
 
-import static android.content.ContentValues.TAG;
-
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -17,8 +16,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.helloworld.model.userDetails;
 import com.google.android.material.textfield.TextInputEditText;
-import com.google.firebase.Firebase;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -28,9 +27,11 @@ import com.google.firebase.database.FirebaseDatabase;
 public class MainActivity2 extends AppCompatActivity {
 
     Button SignUpbtn;
-    TextInputEditText UsernameSignUp,emailSignup, Password, NIM;
+    TextInputEditText UsernameSignUp, emailSignup, Password, NIM;
     FirebaseAuth mAuth;
+    private static final String TAG = "MainActivity2";
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +47,7 @@ public class MainActivity2 extends AppCompatActivity {
         UsernameSignUp = findViewById(R.id.UsernameSignUp);
         Password = findViewById(R.id.Password);
         NIM = findViewById(R.id.NIM);
+
 
         SignUpbtn.setOnClickListener(view ->{
             String username, email, password, nim;
@@ -73,7 +75,7 @@ public class MainActivity2 extends AppCompatActivity {
         });
     }
 
-    private <DatabaseReference> void registerUser(String usernameSignUp, String Password, String NIM, String emailSignup) {
+    private void  registerUser(String usernameSignUp, String Password, String NIM, String emailSignup) {
         FirebaseAuth auth = FirebaseAuth.getInstance();
 
         auth.createUserWithEmailAndPassword(emailSignup, Password).addOnCompleteListener(task -> {
@@ -84,9 +86,9 @@ public class MainActivity2 extends AppCompatActivity {
 
                     userDetails userDetails = new userDetails(uid, usernameSignUp, Password, emailSignup, NIM);
 
-                    DatabaseReference reference = FirebaseDatabase.getInstance().getReference("registerUsers");
+                    DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("Users");
                     reference.child(uid).setValue(userDetails).addOnCompleteListener(task1 -> {
-                        if (task1.isSuccesful()) {
+                        if (task1.isSuccessful()) {
                             fuser.sendEmailVerification().addOnCompleteListener(task2 -> {
                                 if (task2.isSuccessful()) {
                                     Toast.makeText(MainActivity2.this, "Verifikasi Email Telah Dikirim", Toast.LENGTH_SHORT).show();
@@ -100,6 +102,15 @@ public class MainActivity2 extends AppCompatActivity {
                                     Log.d(TAG, "Register Error");
                                 }
                             });
+                        } else {
+                            try {
+                                throw task.getException();
+                            } catch (FirebaseAuthUserCollisionException e) {
+                                Toast.makeText(MainActivity2.this, "Email Sudah Terdaftar", Toast.LENGTH_LONG).show();
+                            } catch (Exception e) {
+                                Log.e(TAG, e.getMessage());
+                                Toast.makeText(MainActivity2.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                            }
                         }
                     });
                 }

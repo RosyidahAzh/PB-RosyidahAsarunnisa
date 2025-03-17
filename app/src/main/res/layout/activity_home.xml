@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="16dp"
+    android:background="#561C24"
+    tools:context=".HomeActivity">
+
+    <LinearLayout
+        android:padding="16dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="RESEP MASAKAN TRADISIONAL INDONESIA"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:fontFamily="serif"
+            android:textColor="#E8D8C4"
+            android:layout_marginBottom="5pt"
+            android:textAlignment="center"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:scaleType="centerCrop"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/gado_gado">
+                </ImageView>
+
+                <TextView
+                    android:text="Gado-gado"
+                    android:textStyle="bold"
+                    android:gravity="center_horizontal"
+                    android:fontFamily="serif"
+                    android:textColor="#561C24"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <Button
+                    android:id="@+id/btnlihatResep1"
+                    android:text="Lihat Resep"
+                    android:textSize="16dp"
+                    android:fontFamily="serif"
+                    android:backgroundTint="#561C24"
+                    android:layout_marginTop="5pt"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </Button>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:scaleType="centerCrop"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/gudeg">
+                </ImageView>
+
+                <TextView
+                    android:text="Gudeg"
+                    android:textStyle="bold"
+                    android:gravity="center_horizontal"
+                    android:fontFamily="serif"
+                    android:textColor="#561C24"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </TextView>
+                <Button
+                    android:id="@+id/btnlihatResep2"
+                    android:text="Lihat Resep"
+                    android:textSize="16dp"
+                    android:fontFamily="serif"
+                    android:backgroundTint="#561C24"
+                    android:layout_marginTop="5pt"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </Button>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:scaleType="centerCrop"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/mie_aceh">
+
+                </ImageView>
+
+                <TextView
+                    android:text="Mie Aceh"
+                    android:textStyle="bold"
+                    android:gravity="center_horizontal"
+                    android:fontFamily="serif"
+                    android:textColor="#561C24"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <Button
+                    android:id="@+id/btnlihatResep3"
+                    android:text="Lihat Resep"
+                    android:textSize="16dp"
+                    android:fontFamily="serif"
+                    android:backgroundTint="#561C24"
+                    android:layout_marginTop="5pt"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </Button>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:scaleType="centerCrop"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/pempek">
+
+                </ImageView>
+
+                <TextView
+                    android:text="Pempek Palembang"
+                    android:textStyle="bold"
+                    android:gravity="center_horizontal"
+                    android:fontFamily="serif"
+                    android:textColor="#561C24"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <Button
+                    android:id="@+id/btnlihatResep4"
+                    android:text="Lihat Resep"
+                    android:textSize="16dp"
+                    android:fontFamily="serif"
+                    android:backgroundTint="#561C24"
+                    android:layout_marginTop="5pt"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </Button>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:scaleType="centerCrop"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/sate">
+
+                </ImageView>
+
+                <TextView
+                    android:text="Sate Madura"
+                    android:textStyle="bold"
+                    android:gravity="center_horizontal"
+                    android:fontFamily="serif"
+                    android:textColor="#561C24"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <Button
+                    android:id="@+id/btnlihatResep5"
+                    android:text="Lihat Resep"
+                    android:textSize="16dp"
+                    android:fontFamily="serif"
+                    android:backgroundTint="#561C24"
+                    android:layout_marginTop="5pt"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </Button>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
