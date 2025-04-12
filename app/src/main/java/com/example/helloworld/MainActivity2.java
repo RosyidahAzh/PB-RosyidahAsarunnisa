@@ -27,7 +27,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class MainActivity2 extends AppCompatActivity {
 
     Button SignUpbtn;
-    TextInputEditText UsernameSignUp, emailSignup, Password, NIM;
+    TextInputEditText UsernameSignUp, emailSignup, Password;
     FirebaseAuth mAuth;
     private static final String TAG = "MainActivity2";
 
@@ -46,7 +46,7 @@ public class MainActivity2 extends AppCompatActivity {
         SignUpbtn = findViewById(R.id.SignUpbtn);
         UsernameSignUp = findViewById(R.id.UsernameSignUp);
         Password = findViewById(R.id.Password);
-        NIM = findViewById(R.id.NIM);
+
 
 
         SignUpbtn.setOnClickListener(view ->{
@@ -55,7 +55,7 @@ public class MainActivity2 extends AppCompatActivity {
             username = String.valueOf(UsernameSignUp.getText());
             email = String.valueOf(emailSignup.getText());
             password = String.valueOf(Password.getText());
-            nim = String.valueOf(NIM.getText());
+
 
             if (TextUtils.isEmpty(username)){
                 Toast.makeText(MainActivity2.this, "Enter Username", Toast.LENGTH_LONG).show();
@@ -66,12 +66,7 @@ public class MainActivity2 extends AppCompatActivity {
             }else if (TextUtils.isEmpty(password)){
                 Toast.makeText(MainActivity2.this, "Enter Password", Toast.LENGTH_LONG).show();
                 Password.requestFocus();
-            }else if (TextUtils.isEmpty(nim)) {
-                Toast.makeText(MainActivity2.this, "Enter NIM", Toast.LENGTH_LONG).show();
-                NIM.requestFocus();
             }
-
-            
         });
     }
 

@@ -5,173 +5,125 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:background="#561C24"
+    tools:context=".ProfileActivity">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Sign Up"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:layout_margin="30dp">
-        </TextView>
+        android:layout_height="match_parent">
 
         <LinearLayout
-
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="24dp">
 
-            <!--- USERNAME -->
+            <!-- Judul -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sign Up"
+                android:textColor="#E8D8C4"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"/>
 
+            <!-- Nama Pengguna -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Nama Pengguna"
-                android:textStyle="bold">
-            </TextView>
+                android:textColor="#E8D8C4"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp"/>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:boxStrokeColor="@color/black"
-                app:boxStrokeWidth="2dp"
-                app:hintAnimationEnabled="true"
-                app:hintEnabled="false">
+                android:layout_marginBottom="16dp"
+                app:boxBackgroundColor="#E8D8C4"
+                app:boxStrokeColor="#561C24"
+                app:boxStrokeWidth="2dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/UsernameSignUp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nama Pengguna"
+                    android:inputType="text"
+                    android:textColor="#561C24"
+                    android:textColorHint="#8B6F61"/>
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/UsernameSignUp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Nama Pengguna"
-                android:inputType="text">
-
-            </com.google.android.material.textfield.TextInputEditText>
-        </LinearLayout>
-
-        <LinearLayout
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:orientation="vertical">
-
-            <!--- email -->
-
+            <!-- Email -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Email Pengguna"
-                android:textStyle="bold">
-            </TextView>
+                android:textColor="#E8D8C4"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp"/>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:boxStrokeColor="@color/black"
-                app:boxStrokeWidth="2dp"
-                app:hintAnimationEnabled="true"
-                app:hintEnabled="false">
+                android:layout_marginBottom="16dp"
+                app:boxBackgroundColor="#E8D8C4"
+                app:boxStrokeColor="#561C24"
+                app:boxStrokeWidth="2dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/emailSignup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:inputType="text"
+                    android:textColor="#561C24"
+                    android:textColorHint="#8B6F61"/>
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/emailSignup"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Email"
-                android:inputType="text">
-
-            </com.google.android.material.textfield.TextInputEditText>
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:orientation="vertical">
-
-            <!--- PASSWORD -->
-
+            <!-- Password -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Kata Sandi"
-                android:textStyle="bold">
-            </TextView>
+                android:textColor="#E8D8C4"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp"/>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:boxStrokeColor="@color/black"
-                app:boxStrokeWidth="2dp"
-                app:hintAnimationEnabled="true"
-                app:hintEnabled="false">
+                android:layout_marginBottom="24dp"
+                app:boxBackgroundColor="#E8D8C4"
+                app:boxStrokeColor="#561C24"
+                app:boxStrokeWidth="2dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Kata Sandi"
+                    android:inputType="textPassword"
+                    android:textColor="#561C24"
+                    android:textColorHint="#8B6F61"/>
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/Password"
+            <!-- Tombol -->
+            <Button
+                android:id="@+id/SignUpbtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Kata Sandi"
-                android:inputType="text">
-
-            </com.google.android.material.textfield.TextInputEditText>
+                android:text="Daftar"
+                android:textColor="#561C24"
+                android:backgroundTint="#E8D8C4"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:fontFamily="serif"
+                android:layout_marginBottom="20dp"/>
         </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:orientation="vertical">
-
-            <!--- NIM -->
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="NIM Pengguna"
-                android:textStyle="bold">
-            </TextView>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:boxStrokeColor="@color/black"
-                app:boxStrokeWidth="2dp"
-                app:hintAnimationEnabled="true"
-                app:hintEnabled="false">
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/NIM"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Masukkan NIM"
-                android:inputType="text">
-
-            </com.google.android.material.textfield.TextInputEditText>
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/SignUpbtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Login"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp">
-
-        </Button>
-
-    </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

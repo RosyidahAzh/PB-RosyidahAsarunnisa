@@ -6,6 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:padding="16dp"
+    android:id="@+id/main"
     android:background="#561C24"
     tools:context=".HomeActivity">
 
@@ -230,6 +231,8 @@
                 </ImageView>
 
                 <TextView
+
+
                     android:text="Sate Madura"
                     android:textStyle="bold"
                     android:gravity="center_horizontal"

@@ -5,19 +5,19 @@
       <SelectionState runConfigName="app">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="HomeActivity">
+      <SelectionState runConfigName="ProfileActivity (3)">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="HomeActivity (1)">
+      <SelectionState runConfigName="ProfileActivity (4)">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="HomeActivity (2)">
+      <SelectionState runConfigName="ProfileActivity (5)">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="HomeActivity (3)">
+      <SelectionState runConfigName="ProfileActivity">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="HomeActivity (4)">
+      <SelectionState runConfigName="MainActivity2">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
     </selectionStates>
